@@ -40,3 +40,10 @@
   margin-top: 1rem;
   color: green;
 }
+
+body {
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
