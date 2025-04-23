@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './css/HomePage.css';
+import './HomePage.css';
 
 function HomePage() {
   const [username, setUsername] = useState('');
