@@ -1,3 +1,4 @@
+from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Tweet, Like
@@ -21,3 +22,7 @@ class LikeTweetView(APIView):
         tweet = Tweet.objects.get(id=tweet_id)
         like = Like.objects.create(tweet=tweet, user=request.user)
         return Response(LikeSerializer(like).data, status=201)
+
+class TweetListCreateView(generics.ListCreateAPIView):
+    queryset = Tweet.objects.all().order_by('-created_at')
+    serializer_class = TweetSerializer
