@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -11,19 +12,8 @@ function App() {
       .catch(err => console.error('Error fetching tweets:', err));
   }, []);
 
-  return (
-    <div className="app">
-      <h1 className="title">Tweets</h1>
-      <div className="tweet-list">
-        {tweets.map(tweet => (
-          <div className="tweet" key={tweet.id}>
-            <strong>@{tweet.username}</strong>
-            <p>{tweet.content}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  return ( <HomePage /> );
 }
+
 
 export default App;
