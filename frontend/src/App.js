@@ -1,11 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import TweetList from './components/TweetList';
+
+const tweets = [
+  { id: 1, username: 'RaitonRed', content: 'سلام دنیا! این اولین توییته 🐥' },
+  { id: 2, username: 'CodeMaster', content: 'هوای یادگیری برنامه‌نویسی دارید؟ بیاید توی ChirpNet!' },
+];
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <TweetList />
+    <div className="app">
+      <h1 className="title">توییت‌ها</h1>
+      <div className="tweet-list">
+        {tweets.map(tweet => (
+          <div className="tweet" key={tweet.id}>
+            <strong>@{tweet.username}</strong>
+            <p>{tweet.content}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
