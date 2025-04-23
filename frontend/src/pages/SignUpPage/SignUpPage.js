@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './HomePage.css';
+import './SignUpPage.css';
 
-function HomePage() {
+function SignUpPage() {
   return (
-    <div className="home-page">
-      <h1>Login to ChirpNet</h1>
-      <form className="login-form">
+    <div className="sign-up-page">
+      <h1>Create an Account</h1>
+      <form className="signup-form">
+        <div className="input-group">
+          <label>Name</label>
+          <input type="text" placeholder="Enter your name" />
+        </div>
         <div className="input-group">
           <label>Email</label>
           <input type="email" placeholder="Enter your email" />
@@ -15,11 +18,10 @@ function HomePage() {
           <label>Password</label>
           <input type="password" placeholder="Enter your password" />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Sign Up</button>
       </form>
-      <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
     </div>
   );
 }
 
-export default HomePage;
+export default SignUpPage;

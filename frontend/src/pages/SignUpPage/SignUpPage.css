@@ -1,13 +1,11 @@
-/* src/pages/HomePage.css */
-.home-page {
+/* src/pages/SignUpPage.css */
+.sign-up-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('./assets/background.png');
-  background-size: cover;
-  background-position: center center;
+  background-color: #f7f7f7;
 }
 
 h1 {
@@ -15,7 +13,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.login-form {
+.signup-form {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -54,6 +52,9 @@ button:hover {
   background-color: #45a049;
 }
 
-p {
-  margin-top: 10px;
+body {
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
 }
